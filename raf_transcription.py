@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import requests
 import base64
@@ -7,8 +8,7 @@ import anthropic
 import base64
 
 client = anthropic.Anthropic(
-    # defaults to os.environ.get("ANTHROPIC_API_KEY")
-    api_key="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",
+    api_key=os.environ.get('ANTHROPIC_KEY'),
 )
 
 def count_tokens(params):
