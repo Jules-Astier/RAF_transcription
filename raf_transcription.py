@@ -7,8 +7,8 @@ import json
 import anthropic
 import base64
 
-print('ANTHROPIC_KEY', os.environ.get('ANTHROPIC_KEY'))
-
+key = os.environ.get('ANTHROPIC_KEY')
+st.write(f"API KEY: {key}")
 client = anthropic.Anthropic(
     api_key=os.environ.get('ANTHROPIC_KEY'),
 )
